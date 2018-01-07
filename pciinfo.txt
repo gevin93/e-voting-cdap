@@ -1,0 +1,9 @@
+wlo1      IEEE 802.11  ESSID:"BELL4G-A264-MAD"  
+          Mode:Managed  Frequency:2.462 GHz  Access Point: 5C:A8:6A:A6:A2:64   
+          Bit Rate=58.5 Mb/s   Tx-Power=20 dBm   
+          Retry short  long limit:2   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=61/70  Signal level=-49 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:1  Invalid misc:8   Missed beacon:0
+
