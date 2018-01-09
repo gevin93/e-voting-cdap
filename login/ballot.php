@@ -8,9 +8,46 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-     
+                 <link rel="stylesheet" href="assets/css/buttons.css">
                 <link rel="stylesheet" href="assets/css/w3.css">
                 <link rel="stylesheet" href="assets/css/modal.css">
+
+
+<script src="assets/js/test.js"></script>
+<script type='text/javascript'>//<![CDATA[
+window.onload=function(){
+(function () {
+var textFile = null,
+  makeTextFile = function (text) {
+    var data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    if (textFile !== null) {
+      window.URL.revokeObjectURL(textFile);
+    }
+
+    textFile = window.URL.createObjectURL(data);
+
+    return textFile;
+  };
+
+
+  var create = document.getElementById('create'),
+    textbox = document.getElementById('textbox');
+
+  create.addEventListener('click', function () {
+    var link = document.getElementById('downloadlink');
+    //link.href =
+     makeTextFile(textbox.value);
+    link.style.display = 'block';
+  }, false);
+})();
+
+}//]]> 
+
+</script>
+
 </head>
 <body>
 
@@ -27,139 +64,212 @@
 
  </div>
 
-<center>  <div class="w3-red w3-hover-shadow w3-padding-64 w3-center" style="width:90%">
-  <br>
+
+
+
+
+  
+
+</div>
+
+
+
+
+  <div class="container">
+    <div class="col-sm-4">
+      <img src="https://www.news.lk/media/k2/items/cache/3409e45349ec9f6b3397bfe10e87a1d0_XL.jpg" class="media-object" style="width:100%">
+    </div>
+    <div class="col-sm-8" style="background-color:lavenderblush;" width="100%">
+      
+
+<br>
+
 </br>
-  <!-- Left-aligned media object -->
-  <div class="media">
-    <div class="media-left">
-      <img src="https://raw.githubusercontent.com/gevin93/e-voting-cdap/master/images/Maithripala-Sirisena.jpg" class="media-object" style="width:200px">
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"></h4>
-      <h1>Maithripala Sirisena</h1>
-          <br>
-</br>
-               <center> <button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#myModal" style="width:150px">Vote</button></center>
-
-    
-
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Notice</h4>
-      </div>
-      <div class="modal-body">
-        <p>Your Vote Has Been Casted. Please Exit. Thank You</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-  </div>
-  </div>
-</div>
-  <hr>
-<div class="w3-green w3-hover-shadow w3-padding-64 w3-center" style="width:90%">
-  <div class="media">
-    <div class="media-left">
-      <img src="https://raw.githubusercontent.com/gevin93/e-voting-cdap/master/images/Ranil-Wickremesinghe.jpg" class="media-object" style="width:200px">
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"></h4>
-    <h1>Ranil Wickramasinghe</h1>
-    <br>
-</br>
-                   <center> <button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#myModal" style="width:150px">Vote</button></center>
-    </div>
-
-
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Notice</h4>
-      </div>
-      <div class="modal-body">
-        <p>Your Vote Has Been Casted. Please Exit. Thank You</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-    </div>
-</div>
-</div>
-</div>
-<hr>
-<div class="w3-blue w3-hover-shadow w3-padding-64 w3-center" style="width:90%">
-  <div class="media">
-    <div class="media-left">
-      <img src="https://raw.githubusercontent.com/gevin93/e-voting-cdap/master/images/mahinda_rajapaksa.jpg" class="media-object" style="width:200px">
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading"></h4>
+      <center>
       <h1>Mahinda Rajapaksha</h1>
-      <br>
-  </br>
-                     <center> <button type="button" class="btn btn-default btn-block btn-lg" data-toggle="modal" data-target="#myModal" style="width:150px">Vote</button></center>
+      <h1>මහින්ද රාජපක්ෂ</h1>
+      <h1>மகிந்த ராசபக்ச</h1>
+      </center>
+
+
+
+ <center><button type="button" input id="inputFileNameToSaveAs" onclick="saveTextAsFile()" class="btn btn-success btn-lg round" style="width:250px">Vote</button></center>
+
+<br>
+</br>
+
+
 
     </div>
-
-
-
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Notice</h4>
-      </div>
-      <div class="modal-body">
-        <p>Your Vote Has Been Casted. Please Exit. Thank You</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
   </div>
+</div>
+   
+<hr>
+
+  <div class="container">
+    <div class="col-sm-4">
+      <img src="http://newsfirst.lk/english/wp-content/uploads/2017/09/Maithripala-Sirisena.jpg" class="media-object" style="width:100%">
+    </div>
+    <div class="col-sm-8" style="background-color:lavenderblush;" width="100%">
+      
+
+<br>
+
+</br>
+      <center>
+        <h1>Maithripala Sirisena</h1>
+        <h1>මෛත්‍රීපාල සිරිසේන</h1>
+        <h1>மைத்திரிபால சிறிசேன</h1>
+      </h1></center>
+
+
+
+ 
+ <center><button type="button" input id="inputFileNameToSaveAs" onclick="saveTextAsFile1()" class="btn btn-success btn-lg round" style="width:250px">Vote</button></center>
+<br>
+</br>
+
+
+    </div>
+  </div>
+</div>
+   
+<hr>
+
+  <div class="container">
+    <div class="col-sm-4">
+      <img src="https://www.colombotelegraph.com/wp-content/uploads/2015/03/Ranil.jpg" class="media-object" style="width:100%">
+    </div>
+    <div class="col-sm-8" style="background-color:lavenderblush;" width="100%">
+      
+
+<br>
+
+</br>
+      <center>
+        <h1>Ranil Wickremesinghe</h1>
+        <h1>රනිල් වික්‍රමසිංහ</h1>
+        <h1>ரணில் விக்ரமசிங்க</h1>
+      </center>
+
+
+
+
+
+ <center><button type="button" input id="inputFileNameToSaveAs" onclick="saveTextAsFile2()" class="btn btn-success btn-lg round" style="width:250px">Vote</button></center> 
+
+
+
+<br>
+
+
+
+
+
+</br>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+   
+<hr>
+
+
+
+ 
+<script type="text/javascript">
+ 
+function saveTextAsFile()
+{
+    var textToSave = "Mahinda Rajapaksha";
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+ 
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+
+</script>
+ 
+<script type="text/javascript">
+ 
+function saveTextAsFile1()
+{
+    var textToSave = "Maithripala Sirisena";
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+ 
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+
+</script>
+ 
+<script type="text/javascript">
+ 
+function saveTextAsFile2()
+{
+    var textToSave = "Ranil Wickremesinghe";
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+ 
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+
+</script>
+
+
+
+<br>
+</br>
+
 </div>
 
 
-
-
-  </div>    
-  </div>
-  
-
-
-
-  
-
-</div>
 
 </body>
 </html>
