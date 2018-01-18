@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bit Secure Employee</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <style>
+		
+body {font-family: Arial;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 5px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+    
+    </head>
+    <body>
+        
+    <form method="post" action="connect.php" style="border:1px solid #ccc">
+        
+        <center>
+	<div class="container">
+    <h1>Add Employee</h1>
+    <p>Please insert below details to add an emplyee profile to the Bit Secure Voting System </p>
+	</div>		        
+	</center>
+
+    <hr>
+    
+    <label><b>NIC</b></label>
+    <input type="text" placeholder="Enter National ID" name="nic" required>
+
+    <label><b>Name</b></label>
+    <input type="text" placeholder="Enter Full Name" name="username" required>
+
+    
+    <label><b>Telephone</b></label>
+    <input type="text" placeholder="Enter Telephone" name="telephone" required>
+    
+
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label><b>PIN</b></label>
+    <input type="password" placeholder="Enter PIN" name="pin" required>
+    
+        
+
+    <center><div class="clearfix">
+      <button type="submit" value="submit" class="btn btn-lg btn-success">Sign Up</button>  
+	
+      <button type="button" class="btn btn-lg btn btn-danger">Cancel</button>  
+
+    </div></center>
+
+</form>    
+        
+    </body>
+</html>
